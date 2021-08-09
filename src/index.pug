@@ -1,0 +1,24 @@
+include ../bemto/bemto
+include pug/header
+
+doctype html
+html(lang="ru")
+    head
+        +doc-header
+    body
+        .wrapper
+            .actions
+                button#edit(type='button')
+                    include ../src/assets/images/edit.svg
+                    | Редактировать
+                button#reset(type='button' style='display: none')
+                    include ../src/assets/images/reset.svg
+                    | Сбросить
+                button#apply(type='button' style='display: none')
+                    include ../src/assets/images/apply.svg
+                    | Применить
+                button#save(type='button')
+                    include ../src/assets/images/save.svg
+                    | Сохранить
+            #container
+        script(src='./js/main.js')
